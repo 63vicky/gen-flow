@@ -9,9 +9,6 @@ import { EditorBody } from "@/components/editor-body"
 import { Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-interface PageProps {
-  params: Promise<{ id: string }>
-}
 
 export default function WorkflowEditorPage() {
   const params = useParams()

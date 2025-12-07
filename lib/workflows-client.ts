@@ -1,4 +1,4 @@
-import type { Workflow } from "../workflow-types"
+import type { Workflow } from "./workflow-types"
 import { nanoid } from "nanoid"
 
 const STORAGE_KEY = "lowcode_workflows_v1"

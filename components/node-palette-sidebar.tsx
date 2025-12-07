@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 import { Webhook, Clock, Globe, Timer, Variable, GitBranch, Repeat, Mail, MessageSquare } from "lucide-react"
 import type { NodeCatalogItem } from "@/lib/workflow-types"
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+const iconMap: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
   Webhook,
   Clock,
   Globe,

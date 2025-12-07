@@ -3,12 +3,12 @@
 import type React from "react"
 
 import { memo } from "react"
-import { Handle, Position, type NodeProps } from "@xyflow/react"
+import { Handle, Position, type NodeProps, type Node } from "@xyflow/react"
 import { getNodeCatalogItem } from "@/lib/node-catalog"
 import { cn } from "@/lib/utils"
 import { Webhook, Clock, Globe, Timer, Variable, GitBranch, Repeat, Mail, MessageSquare } from "lucide-react"
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+const iconMap: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
   Webhook,
   Clock,
   Globe,
@@ -24,6 +24,7 @@ interface WorkflowNodeData {
   label: string
   nodeType: string
   config: Record<string, unknown>
+  [key: string]: unknown
 }
 
 export const WorkflowNode = memo(function WorkflowNode({ data, selected }: NodeProps<Node<WorkflowNodeData>>) {
